@@ -13,7 +13,7 @@ struct GameStats
 {
     int player_total = 0;
     int pc_total = 0;
-    int moves_counter[3];
+    int moves_counter[3] = {0,0,0};
 };
 
 const string rpsMoves[3] = {"Rock", "Paper", "Scissors"};
@@ -81,7 +81,7 @@ void game(GameStats& stats) {
 int main()
 {
     int menu_answ;
-    GameStats stats = {0, 0};
+    GameStats stats;
 
     srand(time(0));
 
