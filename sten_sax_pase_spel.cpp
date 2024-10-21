@@ -46,6 +46,8 @@ void game(GameStats& stats) {
         do {
             cout << "Rock (0), Paper (1) or Scissors (2)?\n";
             cin >> player_move;
+            cin.clear();
+            cin.ignore(10000, '\n');
         } while (player_move < 0 || player_move > 2);
 
         cout << "Player: " << rpsMoves[player_move] << "\n";
@@ -111,6 +113,8 @@ int main()
             exit(0);
 
         default:
+            cin.clear();
+            cin.ignore(10000, '\n');
             cout << "Try again!" << endl;
         }
     }
